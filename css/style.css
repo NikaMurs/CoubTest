@@ -2,331 +2,682 @@ body{
     margin: 0;
 }
 
-.header{
-    position: relative;
-    height: 100%;
+@media (min-width: 1200px){
+
+    .header{
+        position: relative;
+        height: 100%;
+    }
+
+    .header::before{
+        content: '';
+        position: absolute; 
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: #383DB7;
+        z-index: -1;
+    }
+
+
+    .contentHeader{
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+
+    .contentHeader::after{
+        content: '';
+        position: absolute; 
+        top: 198px;
+        left: calc(50% + 130px);
+        transform: translateX(-50%);
+        width: 512px;
+        height: 512px;
+        background-image: url('../image/headerImg.png');
+        background-repeat: no-repeat;
+        
+    }
+
+    .menuHeader{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .logoHeader{
+        position: relative; 
+        margin-top: 45px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        color: #383DB7;
+        text-transform: uppercase;
+        text-decoration: none; 
+        line-height: 53px;
+    }
+
+    .logoHeader::before{
+        content: "";
+        background-image: url('../image/logo.png');
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 120px;
+    }
+
+    .linkHeader{
+        width: calc(52% - 130px);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    .linkHeader a{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+    }
+
+    .linkHeader a:hover::after{
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: calc(100% + 20px);
+        margin-top: 20px;
+        background-color: #FFFFFF;
+        left: -10px;
+        bottom: 0;
+    }
+
+    .headerTitle{
+        margin-top: 124px;
+        margin-bottom: 0;
+        margin-left: 60px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    .headerText{
+        margin-top: 20px;
+        margin-left: 60px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .buttonHearder{
+        margin-top: 125px;
+        margin-bottom: 133px;
+        margin-left: 60px;
+        display: inline-block;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 14px 26px;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #383DB7;
+    }
+
+    .buttonHearder:hover{
+        background-color: #2d3091;
+    }
+
+    .buttonHearder:active{
+        background-color: #202369;
+    }
+
+    .main{
+        margin-top: 80px;
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+    .cards{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card{
+        box-sizing: border-box;
+        width: calc((100%  / 2) - 40px);
+        padding: 50px;
+        background-color: #F2F2F2;
+        
+    }
+
+    .titleCard{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        color: #000000;
+        margin: 0;
+        margin-left: 150px;       
+    }
+
+    .titleCard{
+        position: relative;
+    }
+
+    .titleCard::after{
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #6E63F6;
+        border-radius: 50px;
+        background-size: 73px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position: center;
+        left: -150px;
+        top: -15px
+    }
+
+    .titleCard_1::after{
+        background-image: url('../image/cardTitle_1.png');
+    }
+
+    .titleCard_2::after{
+        background-image: url('../image/cardTitle_2.png');
+    }
+
+    .textCard{
+        width: 70%;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .cardButton{
+        margin-top: 30px;
+        position: relative;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color:#000000;
+        text-decoration: none;
+    }
+
+    .cardButton::after{
+        content: '';
+        background-image: url('../image/arrowIcon.png');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 12px;
+        position: absolute;
+        top: 10px;
+        left: 65px;
+    }
+
+    .cardButton:hover::before{
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: calc(100% + 80px);
+        margin-top: 20px;
+        background-color: #000000;
+        left: -10px;
+        bottom: 0;
+    }
+
+    .blocks{
+        margin-top: 70px;
+    }
+
+    .titleBlocks{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 60px;
+        text-transform: uppercase;
+    }
+
+    .blockContent{
+        margin-top: 180px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block{
+        width: calc((100%  / 4) - 50px)
+    }
+
+    .blockText{
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: justify;
+        position: relative;
+        width: 170px;
+    }
+
+    .blockText::after{
+        content: "";
+        width: 80px;
+        height: 80px;
+        background: #6E63F6;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position: center;
+        top: -110px;
+        left: 0;
+    }
+
+    .blockText::before{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 200px;
+        color: #F2F2F2;
+        position: absolute;
+        top: -110px;
+        right: -65px;
+        z-index: -1;
+    }
+
+    .blockText_1::after{
+        background-image: url('../image/block1.png');
+    }
+
+    .blockText_1::before{
+        content: '1';
+    }
+
+    .blockText_2::after{
+        background-image: url('../image/block2.png');
+    }
+
+    .blockText_2::before{
+        content: '2';
+    }
+
+    .blockText_3::after{
+        background-image: url('../image/block3.png');
+    }
+
+    .blockText_3::before{
+        content: '3';
+    }
+
+    .blockText_4::after{
+        background-image: url('../image/block4.png');
+    }
+
+    .blockText_4::before{
+        content: '4';
+    }
+
+    .footer{
+        padding: 50px 110px;
+        background-color: #F2F2F2;
+        margin-top: 150px;
+    }
+
+    .footerText{
+        margin: 0;
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+    }
 }
 
-.header::before{
-    content: '';
-    position: absolute; 
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: #383DB7;
-    z-index: -1;
-}
-
-
-.contentHeader{
-    margin-left: 130px;
-    margin-right: 130px;
-}
-
-.contentHeader::after{
-    content: '';
-    position: absolute; 
-    top: 198px;
-    left: calc(50% + 130px);
-    transform: translateX(-50%);
-    width: 512px;
-    height: 512px;
-    background-image: url('../image/headerImg.png');
-    background-repeat: no-repeat;
+@media(min-width: 576px) and (max-width: 1200px){
     
+
+
+    .contentHeader{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .contentHeader::after{
+        content: '';
+        position: absolute; 
+        top: 430px;
+        left: calc(50% + 80px);
+        transform: translateX(-50%);
+        width: 512px;
+        height: 512px;
+        background-image: url('../image/headerImg.png');
+        background-repeat: no-repeat;
+        
+    }
+
+    .menuHeader{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .logoHeader{
+        position: relative; 
+        margin-top: 33px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        color: #383DB7;
+        text-transform: uppercase;
+        text-decoration: none; 
+        line-height: 53px;
+    }
+
+    .logoHeader::before{
+        content: "";
+        background-image: url('../image/logo.png');
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: -50px;
+    }
+
+    .linkHeader{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 42px;
+        width: 65%;
+    }
+
+    .linkHeader a{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+    }
+
+    .linkHeader a:hover::after{
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: calc(100% + 20px);
+        margin-top: 10px;
+        background-color: #383DB7;
+        left: -10px;
+        bottom: 0;
+    }
+
+    .headerTitle{
+        margin-top: 95px;
+        margin-bottom: 0;
+        margin-left: 45px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    .headerText{
+        margin-top: 20px;
+        margin-left: 45px;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .buttonHearder{
+        margin-top: 90px;
+        margin-bottom: 526px;
+        margin-left: 45px;
+        display: inline-block;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 14px 26px;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #383DB7;
+    }
+
+    .buttonHearder:hover{
+        background-color: #2d3091;
+    }
+
+    .buttonHearder:active{
+        background-color: #202369;
+    }
+
+    .main{
+        margin-top: 70px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .card{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 50px 70px;
+        background-color: #F2F2F2;
+    }
+
+    .card:nth-child(n+1){
+        margin-top: 30px;
+    }
+
+    .titleCard{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        color: #000000;
+        margin-left: 0px;
+    }
+
+    .titleCard{
+        margin: 0;
+        position: relative;
+    }
+
+    .titleCard::after{
+        content: "";
+        width: 200px;
+        height: 200px;
+        background: #6E63F6;
+        border-radius: 50%;
+        background-size: 130px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position: center;
+        right: 0;
+    }
+
+    .titleCard_1::after{
+        background-image: url('../image/cardTitle_1.png');
+    }
+
+    .titleCard_2::after{
+        background-image: url('../image/cardTitle_2.png');
+    }
+
+    .textCard{
+        width: 60%;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 52px;
+    }
+
+    .cardButton{
+        margin-top: 52px;
+        position: relative;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color:#000000;
+        text-decoration: none;
+    }
+
+    .cardButton::after{
+        content: '';
+        background-image: url('../image/arrowIcon.png');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 12px;
+        position: absolute;
+        top: 10px;
+        left: 65px;
+    }
+
+    .cardButton:hover::before{
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: calc(100% + 80px);
+        margin-top: 20px;
+        background-color: #000000;
+        left: -10px;
+        bottom: 0;
+    }
+
+    .blocks{
+        margin-top: 40px;
+    }
+
+    .titleBlocks{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 60px;
+        text-transform: uppercase;
+    }
+
+    .blockContent{
+        margin-top: 177px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .block{
+        width: calc((100% / 2) - 75px)
+    }
+
+    .block:nth-child(n+3){
+        margin-top: 206px;
+    }
+
+    .blockText{
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: justify;
+        position: relative;
+        width: 170px;
+    }
+
+    .blockText::after{
+        content: "";
+        width: 80px;
+        height: 80px;
+        background: #6E63F6;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-position: center;
+        top: -110px;
+        left: 0;
+    }
+
+    .blockText::before{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 200px;
+        color: #F2F2F2;
+        position: absolute;
+        top: -110px;
+        right: -65px;
+        z-index: -1;
+    }
+
+    .blockText_1::after{
+        background-image: url('../image/block1.png');
+    }
+
+    .blockText_1::before{
+        content: '1';
+    }
+
+    .blockText_2::after{
+        background-image: url('../image/block2.png');
+    }
+
+    .blockText_2::before{
+        content: '2';
+    }
+
+    .blockText_3::after{
+        background-image: url('../image/block3.png');
+    }
+
+    .blockText_3::before{
+        content: '3';
+    }
+
+    .blockText_4::after{
+        background-image: url('../image/block4.png');
+    }
+
+    .blockText_4::before{
+        content: '4';
+    }
+
+    .footer{
+        padding: 50px 110px;
+        background-color: #F2F2F2;
+        margin-top: 150px;
+    }
+
+    .footerText{
+        margin: 0;
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+    }
 }
-
-.menuHeader{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.logoHeader{
-    position: relative; 
-    margin-top: 45px;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    color: #383DB7;
-    text-transform: uppercase;
-    text-decoration: none; 
-    line-height: 53px;
-}
-
-.logoHeader::before{
-    content: "";
-    background-image: url('../image/logo.png');
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    right: 120px;
-}
-
-.linkHeader{
-    width: calc(52% - 130px);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-}
-
-.linkHeader a{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
-    position: relative;
-}
-
-.linkHeader a:hover::after{
-    display: block;
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: calc(100% + 20px);
-    margin-top: 20px;
-    background-color: #FFFFFF;
-    left: -10px;
-    bottom: 0;
-}
-
-.headerTitle{
-    margin-top: 124px;
-    margin-bottom: 0;
-    margin-left: 60px;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    text-transform: uppercase;
-}
-
-.headerText{
-    margin-top: 20px;
-    margin-left: 60px;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.buttonHearder{
-    margin-top: 125px;
-    margin-bottom: 133px;
-    margin-left: 60px;
-    display: inline-block;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    padding: 14px 26px;
-    color: #FFFFFF;
-    text-decoration: none;
-    background-color: #383DB7;
-}
-
-.buttonHearder:hover{
-    background-color: #2d3091;
-}
-
-.buttonHearder:active{
-    background-color: #202369;
-}
-
-.main{
-    margin-top: 80px;
-    margin-left: 110px;
-    margin-right: 110px;
-}
-
-.cards{
-    display: flex;
-    justify-content: space-between;
-}
-
-.card{
-    width: calc((100%  / 2) - 110px - 40px);
-    padding: 50px;
-    background-color: #F2F2F2;
-    
-}
-
-.titleCard{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    color: #000000;
-    margin-left: 150px;
-}
-
-.titleCard{
-    position: relative;
-}
-
-.titleCard::after{
-    content: "";
-    width: 100px;
-	height: 100px;
-	background: #6E63F6;
-	border-radius: 50px;
-    background-size: 73px;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-position: center;
-    left: -150px;
-    top: -15px
-}
-
-.titleCard_1::after{
-    background-image: url('../image/cardTitle_1.png');
-}
-
-.titleCard_2::after{
-    background-image: url('../image/cardTitle_2.png');
-}
-
-.textCard{
-    width: 70%;
-    margin-top: 70px;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-}
-
-.cardButton{
-    margin-top: 30px;
-    position: relative;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    color:#000000;
-    text-decoration: none;
-}
-
-.cardButton::after{
-    content: '';
-    background-image: url('../image/arrowIcon.png');
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 12px;
-    position: absolute;
-    top: 10px;
-    left: 65px;
-}
-
-.cardButton:hover::before{
-    display: block;
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: calc(100% + 80px);
-    margin-top: 20px;
-    background-color: #000000;
-    left: -10px;
-    bottom: 0;
-}
-
-.blocks{
-    margin-top: 70px;
-}
-
-.titleBlocks{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 60px;
-    text-transform: uppercase;
-}
-
-.blockContent{
-    margin-top: 180px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.block{
-    width: calc((100%  / 4) - 50px)
-}
-
-.blockText{
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: justify;
-    position: relative;
-    width: 170px;
-}
-
-.blockText::after{
-    content: "";
-    width: 80px;
-	height: 80px;
-	background: #6E63F6;
-    background-size: 40px;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-position: center;
-    top: -110px;
-    left: 0;
-}
-
-.blockText::before{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 280px;
-    line-height: 200px;
-    color: #F2F2F2;
-    position: absolute;
-    top: -110px;
-    right: -65px;
-    z-index: -1;
-}
-
-.blockText_1::after{
-    background-image: url('../image/block1.png');
-}
-
-.blockText_1::before{
-    content: '1';
-}
-
-.blockText_2::after{
-    background-image: url('../image/block2.png');
-}
-
-.blockText_2::before{
-    content: '2';
-}
-
-.blockText_3::after{
-    background-image: url('../image/block3.png');
-}
-
-.blockText_3::before{
-    content: '3';
-}
-
-.blockText_4::after{
-    background-image: url('../image/block4.png');
-}
-
-.blockText_4::before{
-    content: '4';
-}
-
-
-
